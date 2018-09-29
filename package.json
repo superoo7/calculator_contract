@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "truffle": "^4.1.14"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.6",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "typescript": "^3.1.1"
+  },
+  "name": "calculator",
+  "version": "1.0.0",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && truffle migrate && truffle test",
+    "deploy": "truffle deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
