@@ -18,4 +18,12 @@ contract Calculator {
     function minusToNumber(uint num) public {
         result = result - num;
     }
+
+    function multiplyToNumber(uint num) public {
+        result = result * num;
+    }
+
+    function divideToNumber(uint num) public {
+        result = result / num;
+    }
 }
