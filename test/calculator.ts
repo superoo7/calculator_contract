@@ -63,4 +63,48 @@ contract("Calculator", () => {
         );
       });
   });
+
+  it("should multiply 2 to the result", () => {
+    let calculator: CalculatorInstance;
+    let current: number;
+    let numberToMultiply = 2;
+    return Calculator.deployed()
+      .then(instance => {
+        calculator = instance;
+        return calculator.getResult.call();
+      })
+      .then(result => {
+        current = result;
+        return calculator.multiplyToNumber(numberToMultiply);
+      })
+      .then(_res => calculator.getResult.call())
+      .then(result => {
+        assert.equal(
+          result,
+          parseInt(`${current}`) * parseInt(`${numberToMultiply}`)
+        );
+      });
+  });
+
+  it("should divide 2 to the result", () => {
+    let calculator: CalculatorInstance;
+    let current: number;
+    let numberToDivide = 2;
+    return Calculator.deployed()
+      .then(instance => {
+        calculator = instance;
+        return calculator.getResult.call();
+      })
+      .then(result => {
+        current = result;
+        return calculator.divideToNumber(numberToDivide);
+      })
+      .then(_res => calculator.getResult.call())
+      .then(result => {
+        assert.equal(
+          result,
+          parseInt(`${current}`) / parseInt(`${numberToDivide}`)
+        );
+      });
+  });
 });

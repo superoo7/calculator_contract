@@ -12,8 +12,10 @@ declare interface Contract<T> {
 
 declare interface CalculatorInstance {
   getResult(): number;
-  addToNumber(value: number): void;
-  minusToNumber(value: number): void;
+  addToNumber(num: number): void;
+  minusToNumber(num: number): void;
+  multiplyToNumber(num: number): void;
+  divideToNumber(num: number): void;
   //   getBalance(account: string): number;
   //   getBalanceInEth(account: string): number;
   //   sendCoin(account: string, amount: number, meta?: TransactionMeta): Promise<void>;
